@@ -44,6 +44,85 @@ x : 터미널이 없는 프로세스를 출력한다.<br>
 <p>-p : 각 프로세스 ID에 대해 한 행씩 출력한다.</p>
 <p>command : 지정한 명령어를 실행한다.</p>
 
+<h3>jobs 명령어로 확인할 수 있는 세션의 상태값은 다음과 같다.</h3>
+
+<table cellspacing="0" border="1">
+<caption></caption>
+	<colgroup>
+		<col width="200">
+		<col>
+	</colgroup>
+	<tbody>
+		<tr>
+			<td><p><strong>상태</strong></p></td>
+			<td><p><strong>설명</strong></p></td>
+		</tr>
+		<tr>
+			<td><p><strong><span>Running</span></strong></p></td>
+			<td><p>
+				작업이 일시 중단되지 않았고 종료하지 않고 
+				계속 진행 중임을 뜻한다.
+			</p></td>
+		</tr>
+		<tr>
+			<td><p><strong><span>Done</span></strong></p></td>
+			<td><p>작업이 완료되어 0을 반환하고 종료했음을 뜻한다.</p></td>
+		</tr>
+		<tr>
+			<td><p>
+				<strong>
+					<span>Done</span>
+					(<span>code</span>)
+				</strong>
+			</p></td>
+			<td><p>
+				작업이 정상적으로 완료했으며, 
+				0이 아닌 코드를 반환했음을 뜻한다.
+			</p></td>
+		</tr>
+		<tr>
+			<td><p><strong><span>Stopped</span></strong></p></td>
+			<td><p>작업이 일시 중단됨을 뜻한다.</p></td>
+		</tr>
+		<tr>
+			<td><p>
+				<strong>
+					<span>Stopped</span>
+					(<span>SIGTSTP</span>)
+				</strong>
+			</p></td>
+			<td><p><span>SIGTSTP</span> 신호가 작업을 일시 중단했음을 뜻한다.</p></td>
+		</tr>
+		<tr>
+			<td ><p>
+				<strong>
+					<span>Stopped</span>
+					(<span>SIGSTOP</span>)
+				</strong>
+			</p></td>
+			<td><p><span>SIGSTOP</span> 신호가 일시 중단했음을 뜻한다.</p></td>
+		</tr>
+		<tr>
+			<td><p>
+				<strong>
+					<span >Stopped</span>
+					(<span>SIGTTIN</span>)
+				</strong>
+			</p></td>
+			<td><p><span>SIGTTIN</span> 신호가 작업을 일시 중단했음을 뜻한다.</p></td>
+		</tr>
+		<tr>
+			<td><p>
+				<strong>
+					<span>Stopped</span>
+					(<span>SIGTTOU</span>)
+				</strong>
+			</p></td>
+			<td><p><span>SIGTTOU</span> 신호가 작업을 일시 중단했음을 뜻한다.</p></td>
+		</tr>
+	</tbody>
+</table>
+
 <hr>
 <h2> kill [시그널] </h2>
 <p>pid ··· : 종료시킬 프로세스 ID나 프로세스 이름을 지정한다.</p>
@@ -53,4 +132,3 @@ x : 터미널이 없는 프로세스를 출력한다.<br>
 <p>-9 : 프로세스를 강제로 종료시킨다.</p>
 
 <img src="https://github.com/changPR/20243093/assets/117575062/34915e68-e92a-4165-ac74-54a236236a25" alt="예시"></img>
-
